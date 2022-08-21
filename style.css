@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+section{
+  position: relative;
+  min-height: 100vh;
+  width:100%;
+  margin: 0 20px;
+}
+section .lightBox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 100;
+  display: none;
+}
+.lightBox .lightBox-content{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 950px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+.lightBox .lightBox-content .close{
+  position: absolute;
+  top: 0;
+  left: -40px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.logo-icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.logo-icons a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-icons .logoImg{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.logo-icons .text-content{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.logo-icons .text-content .followers{
+  font-size: 13px;
+  margin-top: -5px;
+}
+.logo-icons .icons i{
+  height: 35px;
+  width: 35px;
+  background: #ccc;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logo-icons .icons i:hover{
+  background: #7d2ae8;
+}
+.lightBox .showImg{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.lightBox .showImg .image{
+  max-width: 900px;
+  width: 100%;
+  max-height: 700px;
+}
+.lightBox .showImg .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+section .image-gallery{
+  max-width: 1300px;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  margin: auto;
+}
+section .image-gallery header{
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  background: #24292d;
+  letter-spacing: 1px;
+}
+.image-gallery .image-container{
+  columns: 3;
+  margin-top: 20px;
+}
+.image-gallery .image-container .image-box{
+  position: relative;
+  cursor: pointer;
+}
+.image-gallery .image-container img{
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.image-container .image-box .logo-icons{
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  background: rgba(0,0,0,0.2);
+  box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.image-container .image-box:hover .logo-icons{
+  opacity: 1;
+  pointer-events: auto;
+}
+.image-container .image-box .logo-icons i{
+  color: #b4b4b4;
+  background: #fff;
+}
+.image-container .image-box .logo-icons i:hover{
+  color: #707070;
+  background: #fff;
+}
+.image-container .image-box .logo-icons .text-content{
+  color: #fff;
+}
+@media (max-width:1043px) {
+  .lightBox .lightBox-content .close{
+    top: -40px;
+    left: 0px;
+  } 
+}
+@media (max-width:1002px) {
+  .image-gallery .image-container{
+    columns: 2;
+  }
+}
+@media (max-width:602px) {
+  .image-gallery .image-container{
+    columns: 1;
+  }
+  section .image-gallery header{
+    font-size: 25px;
+  }
+}
